@@ -1,0 +1,15 @@
+{% load static %}
+
+<div class="mb-4">
+    <h3>Subscribe for newsletter</h3>
+    <form action="#" class="colorlib-subscribe-form" method="POST">
+        {% csrf_token %}
+        <div class="form-group d-flex">
+        <div class="icon"><span class="icon-paper-plane"></span></div>
+
+        {{ newletter_form.email }}
+        
+
+</div>
+</form>
+</div>
