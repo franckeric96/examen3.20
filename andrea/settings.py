@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['andrea320.herokuapp.com']
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [

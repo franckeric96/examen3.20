@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from website.models import Presentation, Infosite
 from contact.models import Newsletter, Contact
+from .models import Tag, Article, CategorieArticle, Commentaire   
 
 
 from contact.forms import NewsletterForm
@@ -11,6 +12,11 @@ from contact.forms import NewsletterForm
 
 
 def fashion(request):
+
+
+    presentation = Presentation.objects.filter(status=True)[:1].get()
+    info = Infosite.objects.filter(status=True)[:1].get()
+
 
     newletter_form = NewsletterForm(request.POST or None)
 
@@ -26,7 +32,9 @@ def fashion(request):
        
    
         'newletter_form':newletter_form,
-
+        'presentation':presentation,
+        'info':info,
+        
 
     }
 
@@ -35,6 +43,10 @@ def fashion(request):
 
 
 def single(request):
+
+    presentation = Presentation.objects.filter(status=True)[:1].get()
+    info = Infosite.objects.filter(status=True)[:1].get()
+
     
     newletter_form = NewsletterForm(request.POST or None)
 
@@ -47,6 +59,9 @@ def single(request):
     datas = {
        
         'newletter_form':newletter_form,
+
+        'presentation':presentation,
+        'info':info,
 
 
 
@@ -58,6 +73,9 @@ def single(request):
 
 def travel(request):
     
+    presentation = Presentation.objects.filter(status=True)[:1].get()
+    info = Infosite.objects.filter(status=True)[:1].get()
+
 
     newletter_form = NewsletterForm(request.POST or None)
 
@@ -69,6 +87,8 @@ def travel(request):
     datas = {
        
            'newletter_form':newletter_form,
+            'presentation':presentation,
+            'info':info,
 
 
 

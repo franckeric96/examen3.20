@@ -6,6 +6,9 @@ from contact.models import Newsletter
 
 from contact.forms import NewsletterForm
 
+from blog.models import Tag, Article, CategorieArticle, Commentaire   
+
+
 # Create your views here.
 
 
@@ -31,7 +34,6 @@ def home(request):
         'presentation':presentation,
         'info':info,
         'newletter_form':newletter_form,
-
 
         
 
