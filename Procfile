@@ -1,0 +1,1 @@
+web: gunicorn andrea.wsgi --log-file - --timeout 120
